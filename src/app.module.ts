@@ -10,6 +10,7 @@ import { RedisModule } from '@/components/redis/redis.module';
 import { LoggerModule } from '@/components/logger/logger.module';
 import { ResponseSuccess, ResponseFail } from '@/components/response/response.service';
 import { MongodbModule } from '@/components/sql/mongodb/mongodb.module';
+import { SharedModule } from '@/components/rabbitmq/shared.module';
 // 配置文件
 import globalConfg from '@/components/config/index';
 // 加载环境变量
@@ -32,6 +33,8 @@ const envPath = `.env.${process.env.NODE_ENV || 'development'}`;
     LoggerModule,
     //数据库
     MongodbModule,
+    // rabbitmq模块
+    SharedModule,
     //下面都是API模块
     UserModule,
     WeixinModule,
