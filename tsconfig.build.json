@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      // 全局路径别名
+      "@/*": [
+        "src/*"
+      ],
+      // 全局路由路径别名
+      "@R/*": [
+        "src/router/*"
+      ],
+      // 全局装饰器别名
+      "@decorators": [
+        "src/components/decorators"
+      ]
+    }
+  }
+}
